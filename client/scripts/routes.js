@@ -48,7 +48,7 @@ class RoutesConfig extends Config {
         controller: 'LoginCtrl as logger'
       })
       .state('confirmation', {
-        url: '/confirmation',
+        url: '/confirmation/:phone',
         templateUrl: confirmationTemplateUrl,
         controller: 'ConfirmationCtrl as confirmation'
       })
@@ -81,5 +81,6 @@ class RoutesRunner extends Runner {
 }
  
 RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+RoutesRunner.$inject = ['$rootScope', '$state'];
 
 export default [RoutesConfig, RoutesRunner];

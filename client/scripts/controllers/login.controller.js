@@ -27,7 +27,8 @@ export default class LoginCtrl extends Controller {
       Accounts.requestPhoneVerification(this.phone, (err) => {
         this.$ionicLoading.hide();
         if (err) return this.handleError(err);
-        this.$state.go('confirmation', { phone: this.phone });
+        console.log('phone from login ', this.phone);
+        this.$state.go('confirmation', { 'phone': this.phone });
       });
     });
   }
