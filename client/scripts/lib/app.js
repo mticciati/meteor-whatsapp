@@ -18,6 +18,8 @@ import ConfirmationCtrl from '../controllers/confirmation.controller';
 import ProfileCtrl from '../controllers/profile.controller';
 import SettingsCtrl from '../controllers/settings.controller';
 import NewChatCtrl from '../controllers/new-chat.controller';
+import ChatNameFilter from '../filters/chat-name.filter';
+import ChatPictureFilter from '../filters/chat-picture.filter';
 import NewChatService from '../services/new-chat.service';
 import InputDirective from '../directives/input.directive';
 import CalendarFilter from '../filters/calendar.filter';
@@ -42,6 +44,8 @@ new Loader(App)
   .load(ProfileCtrl)
   .load(SettingsCtrl)
   .load(NewChatCtrl)
+  .load(ChatNameFilter)
+  .load(ChatPictureFilter)
   .load(NewChatService)
   .load(InputDirective)
   .load(CalendarFilter)
