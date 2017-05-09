@@ -22,7 +22,10 @@ class RoutesConfig extends Config {
         abstract: true,
         templateUrl: tabsTemplateUrl,
         resolve: {
-          user: this.isAuthorized
+          user: this.isAuthorized,
+          chats() {
+            return Meteor.subscribe('chats');
+          }
         }
       })
       .state('tab.chats', {
